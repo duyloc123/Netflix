@@ -1,0 +1,362 @@
+:root {
+    --primary-color: #e50914;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#appMovie {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    height: 5000px;
+}
+
+.header {
+    height: 56.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu {
+    max-width: 75.8rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.menu__right .menu__logo  {
+    margin-top: 20px;
+    width: 9.2rem;
+    height: 2.5rem;
+    fill: var(--primary-color);
+}
+
+.menu__left {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.menu__transalate {
+    height: 2rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    position: relative;
+    color: white;
+    padding: 0 5px;
+    z-index: 1;
+}
+
+.menu__transalate i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    padding-left: 2px;
+}
+
+#transalate {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 0.5px;
+    outline: none;
+    color: white;
+    padding-left: 20px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+#transalate option {
+    color: black;
+    background-color: white;
+}
+
+#btn__signIn {
+    height: 2rem;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+#btn__signIn:hover {
+    background-color: rgba(229,9,20,0.8);
+}
+
+.header__background {
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.header__background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overplay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+.header__content {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.header__content .content {
+    max-width: 36.74rem;
+    height: 25.19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: white;
+}
+
+.content h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.content .content__price {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    font-weight: 900;
+}
+.content .content__email {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.header__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.form__container {
+    width: 70%;
+    position: relative;
+}
+.form__container input {
+    width: 100%;
+    padding: 1.5rem 1rem 1rem 1rem;
+    background-color: rgba(30,38,52,0.5);
+    border: 1px solid rgb(94,94,94);
+    border-radius: 5px;
+}
+.form__container .placeholderText {
+    position: absolute;
+    font-size: 1rem;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(177,186,186);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+.form__container input:focus,
+.form__container input:not(:placeholder-shown) {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    background-color: rgba(30,38,52,0.5);
+    color: white;
+    outline: none;
+}
+
+
+.form__container input:focus + .placeholderText,
+.form__container input:not(:placeholder-shown) + .placeholderText {
+    top: 12px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.header__form .btn--start {
+    padding: 0 2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    line-height: 1;
+    transition: background-color 0.5s ease;
+}
+
+.btn--start:hover {
+    background-color: rgba(229,9,20,0.8);
+}
+
+.curve {
+    width: 100%;
+    height: 6.25rem;
+    background: radial-gradient(
+                    50% 500% at 50% -420%,
+                    rgba(64, 97, 231, 0.4) 80%,
+                    rgba(0, 0, 0, 0.1) 100%
+                ),black;
+    position: relative;
+    bottom: 60px;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    border-top: 2px solid;
+    border-color: var(--primary-color);
+}
+
+.container {
+    height: 1000px;
+    background-color: rgb(0,0,0)
+}
+
+.listMovie {
+    width: 66.12rem;
+    margin: 0 auto;
+}
+
+.listMovie h2 {
+    font-family: "Ubuntu",sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+@media only screen and (max-width: 1440px) {
+    #appMovie {
+        width: 1440px;
+    }
+    .menu {
+        width: 55rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .header {
+        height: 901px;
+    }
+    .btn__movie img{
+        width: 100%;
+    }
+    .listMovie h2 {
+        font-size: 3rem;
+    }
+    .curve {
+        bottom: 57px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .header {
+        height: 887px;
+    }
+    .listMovie h2 {
+        font-size: 3rem;
+    }
+    .card-wrapper {
+        margin-top: 3rem;
+    }
+    .btn__movie img{
+    width: 37.5rem;
+    }
+    .btn__movie {
+        text-align: center;
+    }
+    .btn__movie .number {
+        font-size: 10rem;
+        left: 10rem;
+        bottom: 5rem;
+    }
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        font-weight: bold;
+        font-size: 40px;
+    }
+}
+
+.cardList {
+    list-style-type: none;
+    margin-top: 1.5rem;
+}
+
+.btn__movie {
+    position: relative;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn__movie:hover{
+    transform: scale(1.1);
+}
+
+.btn__movie img {
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.btn__movie span {
+    position: absolute;
+    bottom: 2rem;
+    left: -1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6.25rem;
+    font-weight: 800;
+    color: black;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.card-wrapper {
+    margin-left: 3.3rem;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: rgba(64, 97, 231, 0.4);
+} 
+
+
