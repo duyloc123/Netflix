@@ -250,7 +250,7 @@ body {
 }
 
 .container {
-    height: 1000px;
+    height: 2146px;
     background-color: rgb(0,0,0)
 }
 
@@ -350,6 +350,10 @@ body {
     text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
 }
 
+.card__container {
+    margin-bottom: 3rem;
+}
+
 .card-wrapper {
     margin-left: 3.3rem;
 }
@@ -359,4 +363,237 @@ body {
     color: rgba(64, 97, 231, 0.4);
 } 
 
+.boxMovie {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    transform: translateY(80%);
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0%);
+    transition: all 0.5s ease;
+}
 
+.boxMovie.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(85%);
+}
+
+
+.movie__intro {
+    width: 41.7rem;
+    height: 39rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.movie__intro .intro__header {
+    width: 100%;
+    height: 70%;
+    position: relative;
+}
+
+.intro__header .imageIntro {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://occ-0-395-325.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABVV9gbt3EJsyDMLSD-0Jk01mW5lvHJX1STWaCA0VYXvolLOLAtSc3ufX4YLlJUFrL3QIzieFK_1tQJGhJbPCKqElfp48VWpHAjyx.webp?r=513");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 1rem;
+}
+
+.intro__header .imageIntro::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1px;
+    content: "";
+    background: linear-gradient(40deg, rgb(22, 22, 22) 24.16%, rgba(6, 10, 23, 0) 56.61%), linear-gradient(0deg, rgb(22, 22, 22) 3.91%, rgba(6, 10, 23, 0) 69.26%);
+    z-index: 2;
+}
+
+.intro__header img {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    z-index: 3;
+}
+
+.intro__context {
+    height: 30%;
+    background: rgb(22, 22, 22);
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.5rem 2.5rem 2.5rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.movie__type {
+    margin: 0.2rem 0 1.2rem 0.2rem;
+}
+
+.movie__type span {
+    font-size: 14px;
+    color: #FFFFFFB3;
+    background: #414141;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: "Ubuntu",sans-serif;
+    font-weight: 400;
+}
+
+.intro__context p {
+    font-size: 1rem;
+    color: white;
+    font-family: "Ubuntu",sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.btn--startMovie {
+    width: 30%;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 1rem 0 1rem 0 ;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 0;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+.btn--startMovie span svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.btn--startMovie:hover {
+    background: rgba(229,9,20,0.8);
+}
+
+.exitIntro {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: all 0.2s ease;
+}
+
+.exitIntro:hover {
+    border-radius: 50%;
+    background: rgba(128, 128, 128, 0.4);
+}
+
+.introContext {
+    width: 100%;
+    color: white;
+    display: flex;
+    gap: 10px;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.introContext.wrapper {
+    width: 1/4;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.introContext.wrapper h3 {
+    font-size: 1.5rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+.introContext.wrapper p {
+    font-size: 1rem;
+    color: #FFFFFFB3;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.introContext__icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container__button {
+    margin-top: 2rem;
+}
+
+.btn__click {
+    width: 100%;
+    height: 5.25rem;
+    background-color: rgb(45,45,45);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.btn__click:hover {
+    background-color: rgba(45,45,45,0.9);
+}
+
+.box__content {
+    margin-top: 5px;
+    background-color: rgb(45,45,45);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.box__content.active {
+    display: block;
+}
+
+.box__content p {
+    font-size: 1.5rem;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    text-align: justify;
+}

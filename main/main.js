@@ -27,3 +27,45 @@ new Swiper('.card-wrapper', {
     },
   }
 });
+
+
+// JS App Movie
+const movieIntro  = document.querySelectorAll(".btn__movie");
+
+// Open and exit Intro Movie
+const boxMovie = document.getElementById("boxMovie");
+const exitIntro = document.getElementById('exitIntro');
+
+movieIntro.forEach((movie) => {
+  movie.addEventListener('click', () => {
+    boxMovie.classList.add("active");
+  });
+})
+
+exitIntro.addEventListener('click', () => {
+  boxMovie.classList.remove("active");
+});
+
+document.addEventListener('keydown', function(event) {
+  if(event.key === "Escape") {
+    boxMovie.classList.remove("active");
+  }
+})
+
+// Tab Hidden
+const tabData = document.querySelectorAll(".btn__click");
+const contentData = document.querySelectorAll(".box__content");
+
+tabData.forEach((btn) => {
+  btn.addEventListener('click',() => {
+    const tabId = btn.dataset.tab;
+    const targetTab = document.querySelector(`.box__content[data-content = "${tabId}"]`);
+
+    if(targetTab.classList.contains("active")) {
+      targetTab.classList.remove("active");
+    } else {
+      contentData.forEach(content => content.classList.remove("active"));
+      targetTab.classList.add("active");
+    }
+  });
+});
