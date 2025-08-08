@@ -1,6 +1,7 @@
 # Netflix
 HTML, CSS, JS
 
-# Todo 
-- Desgin layout first page Netflix
+# Desgin layout first page Netflix
 ![alt text](image.png)
+- Done UI
+- Todo: Reponsive Web

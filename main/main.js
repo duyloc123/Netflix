@@ -39,16 +39,19 @@ const exitIntro = document.getElementById('exitIntro');
 movieIntro.forEach((movie) => {
   movie.addEventListener('click', () => {
     boxMovie.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 })
 
 exitIntro.addEventListener('click', () => {
   boxMovie.classList.remove("active");
+  document.body.style.overflow = "";
 });
 
 document.addEventListener('keydown', function(event) {
   if(event.key === "Escape") {
     boxMovie.classList.remove("active");
+    document.body.style.overflow = "";
   }
 })
 
