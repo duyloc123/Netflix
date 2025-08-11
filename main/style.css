@@ -644,6 +644,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    list-style-type: none;
 }
 
 .footer__section ul li {
@@ -681,66 +682,221 @@ body {
 
 
 /* Responsive */
-@media only screen and (min-width: 1440px) {
-    #appMovie {
-        width: 1440px;
+
+@media only screen and (max-width: 1366px){
+    .menu {
+        width: 54rem;
+    }
+
+    .container .listMovie {
+        width: 64rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    body {
+        font-size: 16px;
     }
     .menu {
-        width: 55rem;
+        width: 53.8rem;
+    }
+    .container .listMovie {
+        width: 64rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .listMovie .introContext {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .introContext .introContext.wrapper {
+        width: 40%
+    }
+}
+
+@media only screen and (max-width: 972px) {
+    body {
+        font-size: 15px;
+    }
+    .menu {
+        width: 43.2rem;
+    }
+    .container .listMovie {
+        width: 47.2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+        .listMovie .introContext {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .introContext .introContext.wrapper {
+        width: 40%
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    .menu {
+        width: 43.2rem;
+    }
+    .container .listMovie {
+        width: 47.2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+        .listMovie .introContext {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .introContext .introContext.wrapper {
+        width: 40%
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .menu {
+        width: 27rem;
+    }
+    .header__content .content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .container .listMovie {
+        width: 30rem;
+    }
+    .listMovie .introContext {
+        flex-wrap: wrap;
+    }
+    .introContext .introContext.wrapper {
+        width: 100%
+    }
+    .cardItem {
+        text-align: center;
+    }
+    .btn__movie .number {
+        left: 3.5rem;
+    }
+    .footer__container .menu__transalate {
+        width: 30%;
     }
 }
 
 @media only screen and (max-width: 425px) {
-    #appMovie {
-        width: 425px;
+    body {
+        font-size: 14px;
     }
-    .header {
-        height: 901px;
+    .menu {
+        width: 20rem;
     }
-    .btn__movie img{
-        width: 100%;
-    }
-    .listMovie h2 {
-        font-size: 3rem;
-    }
-    .curve {
-        bottom: 57px;
-    }
-    .introContext {
-        flex-direction: row;
+    .menu__left {
         flex-wrap: wrap;
-        justify-content: space-around;
+        margin-left: 3rem;
     }
-    .introContext.wrapper{
+    .btn__movie {
+        right: 2rem;
+    }
+    .container .listMovie {
+        width: 27rem;
+    }
+    .footer__section ul {
+        justify-content: space-between;
+    }
+    .footer__section ul li {
+        width: 30%;
+    }
+    .footer__container .menu__transalate {
         width: 40%;
+    }
+    .movie__intro {
+        height: 46rem;
+        padding: 0 1rem 0 1rem;
+    }
+    .btn--startMovie {
+        width: 40%;
+    }
+    .movie__type {       
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 0.2rem;
     }
 }
 
 @media only screen and (max-width: 375px) {
-    .header {
-        height: 887px;
+    body {
+        font-size: 13px;
     }
-    .listMovie h2 {
-        font-size: 3rem;
+    .menu {
+        width: 21rem;
     }
-    .card-wrapper {
-        margin-top: 3rem;
-    }
-    .btn__movie img{
-    width: 37.5rem;
+    .menu__left {
+        flex-wrap: wrap;
+        margin-left: 3rem;
     }
     .btn__movie {
-        text-align: center;
+        right: 2rem;
     }
-    .btn__movie .number {
-        font-size: 10rem;
-        left: 10rem;
-        bottom: 5rem;
+    .container .listMovie {
+        width: 24rem;
     }
-    .swiper-button-prev:after,
-    .swiper-button-next:after {
-        font-weight: bold;
-        font-size: 40px;
+    .footer__section ul {
+        justify-content: space-between;
+    }
+    .footer__section ul li {
+        width: 30%;
+    }
+    .footer__container .menu__transalate {
+        width: 40%;
+    }
+    .header__content {
+        align-items: flex-start;
+        margin-top: 4rem;
+    }
+    .content {
+        gap: 1rem;
+    }
+    .curve {
+        bottom: 10rem;
+    }
+    .imageIntro img {
+        width: 80%;
+    }
+
+    .movie__intro {
+        height: 53rem;
+        padding: 0 1rem 0 1rem;
     }
 }
 
+@media only screen and (max-width: 320px) {
+    body {
+        font-size: 12px
+    }
+    .menu {
+        width: 19rem;
+    }
+    .menu__left {
+        flex-wrap: wrap;
+        margin-left: 3rem;
+    }
+    .btn__movie {
+        right: 2rem;
+    }
+    .container .listMovie {
+        width: 20rem;
+    }
+    .movie__intro {
+        height: 60rem;
+    }
+    .btn--startMovie {
+        width: 50%
+    }
+}
